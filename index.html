@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sally Resume</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="application-root"></div>
+  </body>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script type="text/babel">
+    function App(props) {
+      return (
+        <div>
+          <header>
+            <section>
+              <img src='https://image.shutterstock.com/image-photo/indoor-portrait-beautiful-brunette-young-260nw-640005220.jpg' />
+            </section>
+          </header>
+
+          <address>
+            <section>
+              <p>{props.name}</p>
+              <p>Email address: Sally@student.com</p>
+              <p>Phone Number: (723)483-9281</p>
+            </section>
+          </address>
+
+          <main>
+            <section>
+              <header>
+                <p>Education</p>
+              </header>
+              <ul>
+                <li>Ohio State University 2013-2017</li>
+                <li>Barnaby High School 2009-2013</li>
+              </ul>
+            </section>
+
+            <section>
+              <header>
+                <p>Employment History</p>
+              </header>
+
+              <ul>
+                <li>
+                  McDonalds - Hiring Manager 2010-2011 - Managed and maintained
+                  schedule for employees. Responsible for hiring new workers and
+                  interviewing.
+                </li>
+                <li>Nanny - Mom's friend 2011-Present</li>
+              </ul>
+            </section>
+          </main>
+        </div>
+      );
+    }
+
+    ReactDOM.render(
+      <App name='Sally Student' />,
+      document.querySelector('#application-root')
+    );
+  </script>
+</html>
