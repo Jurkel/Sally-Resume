@@ -7,7 +7,9 @@ class App extends React.Component {
     return (
       <div className='App'>
         <h1>YOUR APPLICATION NAME!</h1>
-        <TheDate />
+        <TheDate>
+          <div></div>
+        </TheDate>
       </div>
     );
   }
