@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import TheDate from './state/TheDate';
+import Counter from './state/Counter';
 
 class App extends React.Component {
   render() {
@@ -10,6 +11,7 @@ class App extends React.Component {
         <TheDate>
           <div></div>
         </TheDate>
+        <Counter />
       </div>
     );
   }
