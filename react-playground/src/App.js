@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import Bomb from './state-drills/Bomb'
+import RouletteGun from './state-drills/RouletteGun'
 
 class App extends React.Component {
   render() {
     return (
       <div className='App'>
-        <Bomb />
+        <RouletteGun />
       </div>
     );
   }
