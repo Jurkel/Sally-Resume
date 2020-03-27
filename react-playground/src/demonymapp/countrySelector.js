@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import './countrySelector.css';
 
-class countrySelector extends Component {
+class CountrySelector extends Component {
+  changeSelection(value) {
+        if(value === "None") {
+          this.props.changeHandler(null);
+        } else {
+          const country = this.props.countries.find(country => country.name === value);
+          this.props.changeHandler(country);
+        }
+      }
+      
   render() {
     const options = this
       .props
@@ -9,11 +18,15 @@ class countrySelector extends Component {
       .map(
         (country, i) => <option value={country.name} key={i}>{country.name}</option>
       );
+      
       return(
         <div className='country_selector'>
           <form>
             <label htmlFor='country'>Select a country:</label>
-            <select id='country' name='country'>
+            <select 
+              id='country' 
+              name='country'
+              onChange={e => this.changeSelection(e.target.value)}>
               <option value='None'>Select one...</option>
               {options}
             </select>
@@ -23,8 +36,8 @@ class countrySelector extends Component {
   }
 }
 
-countrySelector.defaultProps = {
+CountrySelector.defaultProps = {
   countries: []
 };
 
-export default countrySelector;
+export default CountrySelector;
