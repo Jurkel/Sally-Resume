@@ -14,7 +14,7 @@ class DemonymApp extends Component {
   }
   
   componentDidMount() {
-    fetch('https://country.register.gov.uk/recordsWRONG.json?page-size=5000')
+    fetch('https://country.register.gov.uk/records.json?page-size=5000')
       .then(response => {
         if(!response.ok) {
           throw new Error('Something went wrong, please try again later.')
@@ -58,7 +58,6 @@ class DemonymApp extends Component {
           countries={this.state.countries}
           changeHandler={selected => this.setSelected(selected)}/>
         {demon}
-        <Demonym name='Barbadian' country='Barbados' />
       </div>
     );
   }
