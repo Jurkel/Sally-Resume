@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './playwithdanger/App';
+import App from './interview-prep/Comment';
 
 ReactDOM.render(
   <App />,
