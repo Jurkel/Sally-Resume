@@ -1,12 +1,8 @@
 import React from 'react';
 
-const Image = () => {
+function Image(props) {
   return (
-    <img 
-      className='profile-image'
-      src={this.props.imageLink}
-      alt='profile-pic'
-    />
+    <img src={this.props.imageLink} />
   )
 }
 
