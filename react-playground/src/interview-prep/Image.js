@@ -1,8 +1,10 @@
 import React from 'react';
 
-function Image(props) {
+function Image() {
   return (
-    <img src={this.props.imageLink} />
+    <img 
+      src={this.props.imageLink}
+      alt='random-person' />
   )
 }
 
